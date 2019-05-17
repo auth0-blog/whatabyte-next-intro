@@ -5,33 +5,25 @@ import Head from "next/head";
 import Header from "./Header";
 import NavBar from "./NavBar";
 
-const layoutStyle = {
-  display: "flex",
-  flexDirection: "column",
-  height: "100%",
-  width: "100%"
-};
+import "./Layout.scss";
+import "./index.scss";
 
-const contentStyle = {
-  flex: 1,
-  display: "flex",
-  flexDirection: "column"
-};
+const Layout = props => {
+  const appTitle = `> WHATABYTE`;
 
-const Layout = props => (
-  <div className="Layout" style={layoutStyle}>
-    <Head>
-      <title>WHATABYTE</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
-    </Head>
+  return (
+    <div className="Layout">
+      <Head>
+        <title>WHATABYTE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+      </Head>
 
-    <Header />
-    <div className="Content" style={contentStyle}>
-      {props.children}
+      <Header appTitle={appTitle} />
+      <div className="Content">{props.children}</div>
+      <NavBar />
     </div>
-    <NavBar />
-  </div>
-);
+  );
+};
 
 export default Layout;

@@ -1,0 +1,25 @@
+// components/Layout.scss
+
+@import "../theme/theme";
+
+.Layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+
+  .Content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background: $secondary;
+    color: $on-secondary;
+    font-family: $core-font;
+  }
+}
