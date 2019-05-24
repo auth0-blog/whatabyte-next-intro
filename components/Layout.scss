@@ -21,5 +21,9 @@
     background: $secondary;
     color: $on-secondary;
     font-family: $core-font;
+
+    a {
+      color: inherit;
+    }
   }
 }
